@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: "Open Sans";
+    background-color: rgb(53, 53, 53);
+    color: white;
+    /* Center child elements */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container__ball {
+    width: 250px;
+    height: 250px;
+    background-color: rgb(50, 174, 205);
+    margin: 80px auto;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.container__text:hover,
+.container__ball:hover {
+    animation: bounce 1s linear;
+}
+
+@keyframes bounce {
+    20%,
+    50%,
+    80%,
+    to {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-40px);
+    }
+    70% {
+        transform: translateY(-20px);
+    }
+    90% {
+        transform: translateY(-6px);
+    }
+}
