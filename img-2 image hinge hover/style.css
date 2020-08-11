@@ -1,0 +1,55 @@
+        body {
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+            /* Center the child element (.block)  */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(53, 53, 53);
+        }
+        /* Main block */
+        
+        body .block {
+            width: 500px;
+            height: 500px;
+            position: relative;
+            background-color: rgb(127, 248, 79);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        
+        body .block:hover .image {
+            transform: rotateZ(90deg);
+        }
+        
+        body .block .image {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            transition: 1s ease-in-out;
+            transform-origin: 0 0;
+        }
+        
+        body .block .image img {
+            width: inherit;
+            height: inherit;
+        }
+        
+        body .block .content {
+            display: block;
+            padding: 30px 20px;
+            position: absolute;
+            top: 0;
+            color: white;
+        }
+        
+        body .block .content h1 {
+            text-align: center;
+        }
+        
+        body .block .content p {
+            font-size: 20px;
+        }
