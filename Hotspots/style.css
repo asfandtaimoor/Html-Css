@@ -1,0 +1,90 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans";
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+}
+
+.container img{
+    width: 100%;
+}
+
+.hotspot{
+    width: 20px;
+    height: 20px;
+    background-color: #9acd32;
+    border-radius: 50%;
+    position: absolute;
+    animation: wave 1s infinite;
+    cursor: pointer;
+}
+
+.watch{
+    left: 12%;
+    bottom: 24%;
+}
+
+.laptop{
+    left: 40%;
+    top: 40%;
+}
+
+.mouse{
+    right: 10%;
+    bottom: 22%;
+}
+
+.vase{
+    right: 18%;
+    bottom: 50%;
+}
+
+@keyframes wave{
+    from{
+        box-shadow: 0 0 0 0 #9acd32bb;
+    }
+    to{
+        box-shadow: 0 0 0 10px #9acd3210;
+    }
+}
+
+.hotspot::before{
+    content: attr(text);
+    width: max-content;
+    position: absolute;
+    background-color: #222222dd;
+    color: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 30px;
+    padding: 8px 20px;
+    font-size: 14px;
+    border-radius: 3px;
+    display: none;
+}
+
+.hotspot::after{
+    content: "";
+    border-color: transparent transparent #222222dd;
+    border-width: 0 8px 6px;
+    border-style: solid;
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+.hotspot:hover::before,
+.hotspot:hover::after{
+    display: block;
+}
